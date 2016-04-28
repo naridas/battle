@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(bob).to receive(:receive_damage)
-      grig.attack(bob)
-    end
-  end
-
   describe '#receive_damage' do
     it 'reduces the player hit points' do
       expect { grig.receive_damage }.to change { grig.hp }.by(-10)
