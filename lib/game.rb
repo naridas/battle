@@ -19,8 +19,8 @@ class Game
 		@active_player = opponent_of(active_player)
 	end
 
-	def opponent_of(active_player)
-		@player_arr.select { |p| p != active_player }.first
+	def opponent_of(the_player)
+		@player_arr.select { |p| p != the_player }.first
 	end
 
 end

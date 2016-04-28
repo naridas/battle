@@ -1,7 +1,9 @@
 <div align="center">
-<h1><p> <%= @game.active_player.name %> attacked <%= @game.opponent.name %>! </p></h1><br>
-
-<%= @game.opponent.name %>: <%= @game.opponent.hp %> HP<br><br>
+<% if @game.active_player != @game.player_1 %>
+<h1><p> <%= @game.player_1.name %> attacked <%= @game.player_2.name %>! </p></h1><br>
+<% else %>
+<h1><p> <%= @game.player_2.name %> attacked <%= @game.player_1.name %>! </p></h1><br>
+<% end %>
 
 <a href="/play">OK</a>
 
