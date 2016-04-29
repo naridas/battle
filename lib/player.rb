@@ -13,7 +13,4 @@ def receive_damage
 	@hp -= DEFAULT_DAMAGE
 end
 
-
-
-
 end

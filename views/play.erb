@@ -1,4 +1,5 @@
 <div align="center">
+<% if !@game.game_over? %>
 <h1> Welcome to Cats versus Crabs!!!!</h1>
 <p>Hello <%= @game.player_1.name %> and <%= @game.player_2.name %>. Prepare for BATTLE!</p>
 <br>
@@ -8,4 +9,9 @@
 <p><%= @game.active_player.name %>'s turn</p>
 <br>
 <a href="/attack">Attack!</a>
+<% else %>
+<h1> Winner <%= @game.opponent.name %> </h1><br>
+
+<a href="/">Restart!</a>
+<% end %>
 </div>

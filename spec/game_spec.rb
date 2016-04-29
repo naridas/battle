@@ -9,7 +9,7 @@ describe Game do
   describe "#attack" do
     it "attacks other player" do
       expect(player_2).to receive(:receive_damage)
-      game.attack(player_2)
+      game.attack
     end
   end
 
@@ -44,6 +44,10 @@ describe Game do
     end
   end
 
-
-
+  describe '#game_over?' do
+    it 'check zero hp' do
+      allow(player_1).to receive(:hp).and_return(0)
+      expect(game.game_over?).to eq true
+    end
+  end
 end
