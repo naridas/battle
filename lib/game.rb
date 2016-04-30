@@ -16,6 +16,7 @@ class Game
   end
 
 	def change_active_player
+		#@opponent, @active_player = @active_player, @opponent
 		@active_player = opponent_of(@active_player)
 		@opponent = attacker(@active_player)
 	end
